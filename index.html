@@ -5,7 +5,6 @@
 <meta content="width=device-width,initial-scale=1" name="viewport" />
 <title>SOYOUN KIM — Designer & Creator</title>
 
-<!-- ★ 소셜 미리보기 (OG) 태그 — thumb.webp 사용 -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://supersys-max.github.io/portfolio/" />
 <meta property="og:title" content="SOYOUN KIM — Designer & Creator" />
@@ -219,42 +218,24 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
   position:relative;width:100%;
   overflow:hidden;
 }
+
 .modal-image{
-  width:100%;aspect-ratio:47/30;background:#d6d6d4;border:1px solid var(--line);
+  width:100%;aspect-ratio:1880/1200;background:#d6d6d4;border:1px solid var(--line);
   background-position:center;background-size:cover;background-repeat:no-repeat;
   position:relative;
   will-change:transform, opacity;
 }
-.modal-image .video-slot{
-  position:absolute;inset:0;
-  display:none;
-  background:#000;
-}
-.modal-image.is-video{
-  background:#000;
-  background-image:none !important;
-}
-.modal-image.is-video .video-slot{
-  display:block;
-}
-.modal-image .video-slot iframe{
-  position:absolute;inset:0;
-  width:100%;height:100%;
-  border:0;
-  display:block;
-}
+.modal-image.size-1632{aspect-ratio:1632/1200;}
+
+.modal-image .video-slot{position:absolute;inset:0;display:none;background:#000;}
+.modal-image.is-video{background:#000;background-image:none !important;}
+.modal-image.is-video .video-slot{display:block;}
+.modal-image .video-slot iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;}
 
 .slide-layer{
-  position:absolute;
-  inset:0;
-  background-color:#d6d6d4;
-  background-position:center;
-  background-size:cover;
-  background-repeat:no-repeat;
-  border:1px solid var(--line);
-  pointer-events:none;
-  z-index:5;
-  will-change:transform, opacity;
+  position:absolute;inset:0;
+  background-color:#d6d6d4;background-position:center;background-size:cover;background-repeat:no-repeat;
+  border:1px solid var(--line);pointer-events:none;z-index:5;will-change:transform,opacity;
 }
 .slide-layer.in-next{ animation:slideInNext .45s cubic-bezier(.25,.8,.35,1) forwards; }
 .slide-layer.out-next{ animation:slideOutNext .45s cubic-bezier(.25,.8,.35,1) forwards; }
@@ -277,168 +258,109 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
 @media (hover:hover) and (pointer:fine){.img-nav:hover{background:#171717;color:#fff;transform:translateY(-50%) scale(1.08)}}
 .img-nav:active{background:#171717;color:#fff}
 
-.modal-thumbs{display:flex;gap:14px;margin-top:20px;flex-wrap:wrap;justify-content:center}
-.thumb{width:88px;height:88px;flex:none;border-radius:10px;background:#d6d6d4;border:1px solid var(--line);background-position:center;background-size:cover;background-repeat:no-repeat;cursor:pointer;position:relative;overflow:hidden;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.modal-thumbs{
+  display:flex;
+  gap:8px;
+  margin-top:20px;
+  flex-wrap:nowrap;
+  justify-content:center;
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
+  overflow-x:auto;
+  padding-bottom:4px;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;
+}
+.modal-thumbs::-webkit-scrollbar{height:4px}
+.modal-thumbs::-webkit-scrollbar-thumb{background:#ccc;border-radius:2px}
+.thumb{
+  width:74px;height:74px;flex:none;
+  border-radius:8px;background:#d6d6d4;border:1px solid var(--line);
+  background-position:center;background-size:cover;background-repeat:no-repeat;
+  cursor:pointer;position:relative;overflow:hidden;
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+  touch-action:manipulation;-webkit-tap-highlight-color:transparent;
+}
 .thumb:hover{transform:translateY(-3px);border-color:#999}
 .thumb.active{border:2px solid #171717;box-shadow:0 4px 14px rgba(0,0,0,.18)}
-.thumb.video-thumb{
-  background-color:#000;
-  background-image:none !important;
-  display:flex;align-items:center;justify-content:center;
-}
-.thumb.video-thumb:before{
-  content:"▶";
-  color:#fff;font-size:20px;
-  display:flex;align-items:center;justify-content:center;
-  width:100%;height:100%;
-}
+.thumb.video-thumb{background-color:#000;background-image:none !important;display:flex;align-items:center;justify-content:center;}
+.thumb.video-thumb:before{content:"▶";color:#fff;font-size:18px;display:flex;align-items:center;justify-content:center;width:100%;height:100%;}
 
 .modal-info{margin-top:40px;display:block;text-align:center}
 .modal-num{display:none}
-.modal-title{
-  font-size:clamp(20px,2.2vw,32px);
-  font-weight:300;
-  letter-spacing:-.027em;
-  line-height:1.0;
-  margin:0 0 14px;
-  color:var(--text);
-}
+.modal-title{font-size:clamp(20px,2.2vw,32px);font-weight:300;letter-spacing:-.027em;line-height:1.0;margin:0 0 14px;color:var(--text);}
 
-.modal-title .title-sub{
-  display:block;
-  font-weight:500;
-  color:#555;
-  margin-bottom:6px;
-  letter-spacing:-.018em;
-  line-height:1.035;
-}
-.modal-title .title-main{
-  display:block;
-  font-size:1em;
-  font-weight:700;
-  color:var(--text);
-  letter-spacing:-.027em;
-  line-height:1.035;
-}
+.modal-title .title-sub{display:block;font-weight:500;color:#555;margin-bottom:6px;letter-spacing:-.018em;line-height:1.035;}
+.modal-title .title-main{display:block;font-size:1em;font-weight:700;color:var(--text);letter-spacing:-.027em;line-height:1.035;}
 
-.modal-title.t-style-a .title-sub{
-  font-size:.48em;
-  font-weight:300;
-  letter-spacing:-.018em;
-  line-height:1.035;
-}
+.modal-title.t-style-a .title-sub{font-size:.48em;font-weight:300;letter-spacing:-.018em;line-height:1.035;}
 
-.modal-title.t-style-b .title-sub{
-  font-size:.52em;
-  font-weight:300;
-  letter-spacing:1px;
-  margin-bottom:5px;
-  margin-right:-1px;
-  line-height:1.035;
-}
-.modal-title.t-style-b .title-main{
-  font-weight:600;
-  letter-spacing:9px;
-  margin-right:-9px;
-  line-height:1.035;
-}
+.modal-title.t-style-b .title-sub{font-size:.52em;font-weight:300;letter-spacing:1px;margin-bottom:5px;margin-right:-1px;line-height:1.035;}
+.modal-title.t-style-b .title-main{font-weight:600;letter-spacing:9px;margin-right:-9px;line-height:1.035;}
 
-.modal-meta{
-  margin:0 0 18px;display:flex;justify-content:center;gap:28px;
-  font-size:12px;
-  letter-spacing:.072em;
-  color:#666;
-  line-height:1.035;
-}
+.modal-meta{margin:0 0 18px;display:flex;justify-content:center;gap:28px;font-size:12px;letter-spacing:.072em;color:#666;line-height:1.035;}
 .modal-meta div{display:inline-flex;align-items:center;gap:8px}
 .modal-meta dt{color:var(--muted);font-size:11px;letter-spacing:.144em}
 .modal-meta dd{margin:0;color:#333}
 .modal-meta.hide{display:none}
 
-.modal-desc{display:none}
-
-.modal-extra{
-  margin-top:28px;padding-top:28px;border-top:1px solid var(--line);
-  display:flex;flex-direction:column;gap:34px;
-  padding-left:76px;
-}
+.modal-extra{margin-top:28px;padding-top:28px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:34px;padding-left:76px;}
 .extra-row{display:grid;grid-template-columns: 110px 1fr;gap:16px;align-items:start}
 .modal-extra .extra-row + .extra-row{margin-top:6px;}
 
-.extra-label{
-  font-family:Inter,sans-serif;font-size:13px;font-weight:700;
-  letter-spacing:.18em;
-  color:var(--text);
-  line-height:1.3;
-  text-align:left;padding-top:2px;
-}
+.extra-label{font-family:Inter,sans-serif;font-size:13px;font-weight:700;letter-spacing:.18em;color:var(--text);line-height:1.3;text-align:left;padding-top:2px;}
 .extra-content{text-align:left;min-width:0}
-.extra-body{
-  font-family:"Noto Sans KR",sans-serif;font-size:14px;
-  line-height:1.51;
-  letter-spacing:-.004em;
-  color:#555;margin:0 0 10px;text-align:left;
-}
+.extra-body{font-family:"Noto Sans KR",sans-serif;font-size:14px;line-height:1.51;letter-spacing:-.004em;color:#555;margin:0 0 10px;text-align:left;}
 .extra-body:last-child{margin-bottom:0}
 
-.extra-values{
-  display:flex;align-items:baseline;flex-wrap:wrap;gap:56px;
-  font-family:Inter,sans-serif;font-size:13px;
-  letter-spacing:.054em;
-  color:#555;
-  line-height:1.3;
-  padding-top:2px;
-}
+.extra-values{display:flex;align-items:baseline;flex-wrap:wrap;gap:56px;font-family:Inter,sans-serif;font-size:13px;letter-spacing:.054em;color:#555;line-height:1.3;padding-top:2px;}
 .extra-values .item{display:inline-flex;align-items:baseline;gap:16px}
 .extra-values .item .k{font-weight:700;color:var(--text);letter-spacing:.126em}
 .extra-values .item .v{font-weight:400;color:#555}
 
-.keyword-line{
-  font-family:"Noto Sans KR",sans-serif;font-size:13px;
-  letter-spacing:.036em;
-  color:#333;font-weight:700;margin:14px 0 0;text-align:left;
-  line-height:1.55;
-}
+.keyword-line{font-family:"Noto Sans KR",sans-serif;font-size:13px;letter-spacing:.036em;color:#333;font-weight:700;margin:14px 0 0;text-align:left;line-height:1.55;}
 .keyword-line b{font-weight:700;color:#333;letter-spacing:.054em}
 
-.extra-tags{
-  font-family:Inter,sans-serif;font-size:13px;font-weight:400;
-  letter-spacing:.054em;
-  color:#555;margin:0;text-align:left;
-  line-height:1.3;
-  padding-top:2px;
+.extra-tags{font-family:Inter,sans-serif;font-size:13px;font-weight:400;letter-spacing:.054em;color:#555;margin:0;text-align:left;line-height:1.3;padding-top:2px;}
+
+/* ★ WEBSITE 링크 (한글 라벨 + 화살표) */
+.website-row .extra-content{ padding-top:2px; }
+.website-link{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:"Noto Sans KR",sans-serif;
+  font-size:13.5px;font-weight:500;
+  letter-spacing:-.004em;
+  color:var(--text);
+  padding:11px 18px 11px 16px;
+  border:1px solid var(--line);
+  border-radius:26px;
+  background:#fff;
+  transition:background .25s ease, color .25s ease, border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+  text-decoration:none;
+  line-height:1;
 }
+.website-link:hover{
+  background:#171717;color:#fff;border-color:#171717;
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+.website-link .website-arrow{
+  font-size:14px;transform:translateY(-1px);
+  transition:transform .25s ease;
+}
+.website-link:hover .website-arrow{ transform:translate(2px,-3px); }
 
 .color-pair{display:flex;flex-wrap:wrap;gap:60px;align-items:flex-start}
 .color-block{display:flex;align-items:center;gap:14px}
 .color-block .color-chip{width:52px;height:44px;border-radius:10px;box-shadow:0 3px 10px rgba(0,0,0,.10);flex:none}
 .color-block .color-text{display:flex;flex-direction:column;gap:4px}
-.color-block .color-name{
-  font-family:Inter,sans-serif;font-size:13px;
-  letter-spacing:.126em;
-  font-weight:700;color:var(--text);text-align:left;white-space:nowrap;
-  line-height:1.55;
-}
-.color-block .color-cmyk{
-  font-family:Inter,sans-serif;font-size:12px;
-  letter-spacing:.036em;
-  color:#777;text-align:left;white-space:nowrap;
-  line-height:1.55;
-}
+.color-block .color-name{font-family:Inter,sans-serif;font-size:13px;letter-spacing:.126em;font-weight:700;color:var(--text);text-align:left;white-space:nowrap;line-height:1.55;}
+.color-block .color-cmyk{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.036em;color:#777;text-align:left;white-space:nowrap;line-height:1.55;}
 .color-with-note{display:flex;flex-wrap:wrap;gap:48px;align-items:center}
 .color-with-note .color-block{flex:none}
-.color-with-note .color-note-side{
-  font-family:"Noto Sans KR",sans-serif;font-size:13px;
-  line-height:1.55;
-  letter-spacing:-.004em;
-  color:#555;text-align:left;max-width:520px;margin:0;
-}
-.color-note-single{
-  font-family:"Noto Sans KR",sans-serif;font-size:12.5px;
-  line-height:1.55;
-  letter-spacing:-.004em;
-  color:#555;text-align:left;margin:18px 0 0;white-space:nowrap;overflow-x:auto;
-}
+.color-with-note .color-note-side{font-family:"Noto Sans KR",sans-serif;font-size:13px;line-height:1.55;letter-spacing:-.004em;color:#555;text-align:left;max-width:520px;margin:0;}
+.color-note-single{font-family:"Noto Sans KR",sans-serif;font-size:12.5px;line-height:1.55;letter-spacing:-.004em;color:#555;text-align:left;margin:18px 0 0;white-space:nowrap;overflow-x:auto;}
 .color-note-single::-webkit-scrollbar{height:4px}
 .color-note-single::-webkit-scrollbar-thumb{background:#ccc;border-radius:2px}
 .color-chip.navy{background:#1a2a52}
@@ -449,136 +371,41 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
 
 .modal-30{display:block;text-align:center;padding:8px 0 0}
 .m30-header{text-align:center;margin-bottom:44px}
-.m30-title{
-  font-size:clamp(26px,3vw,42px);font-weight:300;
-  letter-spacing:-.027em;
-  line-height:1.0;
-  margin:0;color:var(--text);
-}
+.m30-title{font-size:clamp(26px,3vw,42px);font-weight:300;letter-spacing:-.027em;line-height:1.0;margin:0;color:var(--text);}
 .m30-radio-section{margin-top:56px;padding-top:40px;border-top:1px solid var(--line);text-align:left}
-.m30-section-head{
-  font-family:Inter,sans-serif;font-size:16px;font-weight:700;
-  letter-spacing:.126em;
-  color:var(--text);text-align:center;margin:0 0 10px;
-  line-height:1.3;
-}
-.m30-section-meta{
-  font-family:Inter,sans-serif;font-size:12px;font-weight:500;
-  letter-spacing:.09em;
-  color:#888;text-align:center;margin:0 0 24px;
-  line-height:1.3;
-}
+.m30-section-head{font-family:Inter,sans-serif;font-size:16px;font-weight:700;letter-spacing:.126em;color:var(--text);text-align:center;margin:0 0 10px;line-height:1.3;}
+.m30-section-meta{font-family:Inter,sans-serif;font-size:12px;font-weight:500;letter-spacing:.09em;color:#888;text-align:center;margin:0 0 24px;line-height:1.3;}
 .m30-section-meta .m30-year{font-weight:700;color:#333;margin-right:14px;letter-spacing:.126em}
 .m30-radio-list{display:flex;flex-direction:column;gap:22px;max-width:820px;margin:0 auto}
 .m30-radio-item{display:grid;grid-template-columns: 34px 1fr auto;gap:18px;align-items:center;padding:16px 20px;background:#fff;border:1px solid var(--line);border-radius:12px;text-align:left}
-.m30-radio-no{
-  font-family:Inter,sans-serif;font-size:13px;font-weight:700;
-  letter-spacing:.072em;
-  color:#aaa;text-align:center;
-  line-height:1.3;
-}
-.m30-radio-info b{
-  font-family:"Noto Sans KR",sans-serif;font-size:14px;font-weight:700;
-  color:var(--text);display:block;margin-bottom:4px;
-  line-height:1.3;
-}
-.m30-radio-info p{
-  font-family:"Noto Sans KR",sans-serif;font-size:13px;color:#777;margin:0 0 4px;
-  line-height:1.3;
-}
-.m30-radio-info .m30-keyword{
-  font-family:Inter,sans-serif;font-size:11px;
-  letter-spacing:.108em;
-  color:#999;margin:0;
-  line-height:1.3;
-}
+.m30-radio-no{font-family:Inter,sans-serif;font-size:13px;font-weight:700;letter-spacing:.072em;color:#aaa;text-align:center;line-height:1.3;}
+.m30-radio-info b{font-family:"Noto Sans KR",sans-serif;font-size:14px;font-weight:700;color:var(--text);display:block;margin-bottom:4px;line-height:1.3;}
+.m30-radio-info p{font-family:"Noto Sans KR",sans-serif;font-size:13px;color:#777;margin:0 0 4px;line-height:1.3;}
+.m30-radio-info .m30-keyword{font-family:Inter,sans-serif;font-size:11px;letter-spacing:.108em;color:#999;margin:0;line-height:1.3;}
 .m30-audio-wrap{display:flex;align-items:center;gap:12px;flex:none}
 .m30-audio-btn{width:38px;height:38px;border-radius:50%;border:none;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;cursor:pointer;transition:transform .2s ease, background .2s ease;flex:none}
 .m30-audio-btn:hover{background:#333;transform:scale(1.05)}
 .m30-audio-btn svg{width:14px;height:14px;fill:#fff}
 
-.m30-audio-track{
-  position:relative;
-  width:180px;
-  height:14px;
-  background:transparent;
-  flex:none;
-  cursor:pointer;
-  touch-action:none;
-  display:flex;
-  align-items:center;
-}
-.m30-audio-track:before{
-  content:"";
-  position:absolute;
-  left:0;right:0;
-  top:50%;
-  transform:translateY(-50%);
-  height:4px;
-  border-radius:2px;
-  background:#e3e3e0;
-}
-.m30-audio-fill{
-  position:absolute;
-  left:0;
-  top:50%;
-  transform:translateY(-50%);
-  height:4px;
-  width:0%;
-  border-radius:2px;
-  background:#000;
-  pointer-events:none;
-}
-.m30-audio-knob{
-  position:absolute;
-  top:50%;
-  left:0%;
-  transform:translate(-50%, -50%);
-  width:12px;
-  height:12px;
-  border-radius:50%;
-  background:#000;
-  box-shadow:0 1px 3px rgba(0,0,0,.3);
-  pointer-events:none;
-  opacity:0;
-  transition:opacity .2s ease;
-}
+.m30-audio-track{position:relative;width:180px;height:14px;background:transparent;flex:none;cursor:pointer;touch-action:none;display:flex;align-items:center;}
+.m30-audio-track:before{content:"";position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);height:4px;border-radius:2px;background:#e3e3e0;}
+.m30-audio-fill{position:absolute;left:0;top:50%;transform:translateY(-50%);height:4px;width:0%;border-radius:2px;background:#000;pointer-events:none;}
+.m30-audio-knob{position:absolute;top:50%;left:0%;transform:translate(-50%, -50%);width:12px;height:12px;border-radius:50%;background:#000;box-shadow:0 1px 3px rgba(0,0,0,.3);pointer-events:none;opacity:0;transition:opacity .2s ease;}
 .m30-audio-track:hover .m30-audio-knob,
 .m30-audio-track.dragging .m30-audio-knob{opacity:1}
 
-.m30-audio-time{
-  font-family:Inter,sans-serif;font-size:11px;
-  letter-spacing:.072em;
-  color:#888;
-  min-width:90px;
-  width:90px;
-  text-align:right;
-  line-height:1.3;
-  font-variant-numeric:tabular-nums;
-  flex:none;
-}
+.m30-audio-time{font-family:Inter,sans-serif;font-size:11px;letter-spacing:.072em;color:#888;min-width:90px;width:90px;text-align:right;line-height:1.3;font-variant-numeric:tabular-nums;flex:none;}
 .m30-tv-section{margin-top:56px;padding-top:40px;border-top:1px solid var(--line);text-align:center}
-.m30-tv-head{
-  font-family:Inter,sans-serif;font-size:16px;font-weight:700;
-  letter-spacing:.126em;
-  color:var(--text);margin:0 0 10px;
-  line-height:1.3;
-}
-.m30-tv-meta{
-  font-family:Inter,sans-serif;font-size:12px;font-weight:500;
-  letter-spacing:.09em;
-  color:#888;text-align:center;margin:0 0 24px;
-  line-height:1.3;
-}
+.m30-tv-head{font-family:Inter,sans-serif;font-size:16px;font-weight:700;letter-spacing:.126em;color:var(--text);margin:0 0 10px;line-height:1.3;}
+.m30-tv-meta{font-family:Inter,sans-serif;font-size:12px;font-weight:500;letter-spacing:.09em;color:#888;text-align:center;margin:0 0 24px;line-height:1.3;}
 .m30-tv-meta .m30-year{font-weight:700;color:#333;margin-right:14px;letter-spacing:.126em}
 .m30-tv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:980px;margin:0 auto 24px}
 .m30-tv-slot{aspect-ratio:16/9;background:#d6d6d4;border:1px solid var(--line);border-radius:10px;background-position:center;background-size:cover;background-repeat:no-repeat;position:relative;overflow:hidden}
-.m30-tv-desc{
-  font-family:"Noto Sans KR",sans-serif;font-size:13.5px;
-  line-height:1.55;
-  letter-spacing:-.004em;
-  color:#555;max-width:720px;margin:0 auto;text-align:center;
-}
+.m30-tv-desc{font-family:"Noto Sans KR",sans-serif;font-size:13.5px;line-height:1.55;letter-spacing:-.004em;color:#555;max-width:720px;margin:0 auto;text-align:center;}
+
+.approach-row .extra-content{ padding-top:0; }
+.approach-row .extra-body{ margin:0; }
+.approach-row .extra-body + .extra-body{ margin-top:12px; }
 
 @media (max-width:800px){
   header{padding:17px 20px}
@@ -622,24 +449,25 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
   .modal-title .title-sub{display:block}
   .modal-title .title-main{display:block}
 
-  .modal-meta{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:6px;
-    margin:0 0 16px;
-    font-size:12.5px;
-    letter-spacing:.04em;
-    line-height:1.5;
-    text-align:left;
-  }
+  .modal-meta{flex-direction:column;align-items:flex-start;gap:6px;margin:0 0 16px;font-size:12.5px;letter-spacing:.04em;line-height:1.5;text-align:left;}
   .modal-meta div{display:flex;align-items:baseline;gap:10px;width:100%;}
   .modal-meta dt{flex:none;min-width:52px;font-size:10px;letter-spacing:.14em;color:#999;text-transform:uppercase;}
   .modal-meta dd{flex:1;min-width:0;font-size:12.5px;color:#333;line-height:1.5;word-break:keep-all;}
 
   .modal-topbar{top:20px;width:calc(100% - 24px)}
   .modal-nav-btn{padding:10px 18px;font-size:10px;letter-spacing:.12em}
-  .thumb{width:45px;height:45px}
-  .modal-thumbs{gap:8px}
+
+  .modal-thumbs{
+    gap:6px;
+    max-width:100%;
+    margin-top:16px;
+    justify-content:flex-start;
+    padding-left:2px;
+    padding-right:2px;
+  }
+  .thumb{width:56px;height:56px;border-radius:6px}
+  .thumb.video-thumb:before{font-size:14px}
+
   .img-nav{width:30px;height:30px;font-size:20px}
   .img-nav.prev{left:8px}
   .img-nav.next{right:8px}
@@ -655,6 +483,8 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
   .extra-values .item{gap:8px}
   .extra-tags{font-size:12.5px;line-height:1.5}
   .extra-body{font-size:13px;line-height:1.55}
+
+  .website-link{font-size:12.5px;padding:9px 15px 9px 13px;}
 
   .color-pair{gap:20px}
   .color-block{gap:12px}
@@ -765,8 +595,11 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     <div class="work-category">
       <div class="category-head"><h3>IDENTITY DESIGN</h3></div>
       <div class="work-grid identity">
-        <a class="work-card" href="javascript:void(0)" data-id="01" data-cat="IDENTITY DESIGN" data-images="id01-1.webp,id01-2.webp,id01-3.webp,id01-4.webp,id01-5.webp" style="background-image:url('images/id01.webp')"><span class="work-no">01</span><span class="view-tag">DETAIL ↗</span></a>
-        <a class="work-card" href="javascript:void(0)" data-id="02" data-cat="IDENTITY DESIGN" data-images="id02-1.webp,id02-2.webp,id02-3.webp,id02-4.webp,id02-5.webp" style="background-image:url('images/id02.webp')"><span class="work-no">02</span><span class="view-tag">DETAIL ↗</span></a>
+        <!-- ★ 01 : 2장 -->
+        <a class="work-card" href="javascript:void(0)" data-id="01" data-cat="IDENTITY DESIGN" data-images="id01-1.webp,id01-2.webp" style="background-image:url('images/id01.webp')"><span class="work-no">01</span><span class="view-tag">DETAIL ↗</span></a>
+        <!-- ★ 02 : 2장 -->
+        <a class="work-card" href="javascript:void(0)" data-id="02" data-cat="IDENTITY DESIGN" data-images="id02-1.webp,id02-2.webp" style="background-image:url('images/id02.webp')"><span class="work-no">02</span><span class="view-tag">DETAIL ↗</span></a>
+        <!-- ★ 03 : 5장 -->
         <a class="work-card" href="javascript:void(0)" data-id="03" data-cat="IDENTITY DESIGN" data-images="id03-1.webp,id03-2.webp,id03-3.webp,id03-4.webp,id03-5.webp" style="background-image:url('images/id03.webp')"><span class="work-no">03</span><span class="view-tag">DETAIL ↗</span></a>
       </div>
     </div>
@@ -774,12 +607,12 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     <div class="work-category">
       <div class="category-head"><h3>EDITORIAL DESIGN</h3></div>
       <div class="work-grid">
-        <a class="work-card" href="javascript:void(0)" data-id="04" data-cat="EDITORIAL DESIGN" data-images="work01-1.webp,work01-2.webp,work01-3.webp,work01-4.webp,work01-5.webp" style="background-image:url('images/work01.webp')"><span class="work-no">04</span><span class="view-tag">DETAIL ↗</span></a>
-        <a class="work-card" href="javascript:void(0)" data-id="05" data-cat="EDITORIAL DESIGN" data-images="work02-1.webp,work02-2.webp,work02-3.webp,work02-4.webp,work02-5.webp" style="background-image:url('images/work02.webp')"><span class="work-no">05</span><span class="view-tag">DETAIL ↗</span></a>
-        <a class="work-card" href="javascript:void(0)" data-id="06" data-cat="EDITORIAL DESIGN" data-images="work03-1.webp,work03-2.webp,work03-3.webp,work03-4.webp,work03-5.webp" style="background-image:url('images/work03.webp')"><span class="work-no">06</span><span class="view-tag">DETAIL ↗</span></a>
-        <a class="work-card" href="javascript:void(0)" data-id="07" data-cat="EDITORIAL DESIGN" data-images="work04-1.webp,work04-2.webp,work04-3.webp,work04-4.webp,work04-5.webp" style="background-image:url('images/work04.webp')"><span class="work-no">07</span><span class="view-tag">DETAIL ↗</span></a>
-        <a class="work-card" href="javascript:void(0)" data-id="08" data-cat="EDITORIAL DESIGN" data-images="work05-1.webp,work05-2.webp,work05-3.webp,work05-4.webp,work05-5.webp" style="background-image:url('images/work05.webp')"><span class="work-no">08</span><span class="view-tag">DETAIL ↗</span></a>
-        <a class="work-card" href="javascript:void(0)" data-id="09" data-cat="EDITORIAL DESIGN" data-images="work06-1.webp,work06-2.webp,work06-3.webp,work06-4.webp,work06-5.webp" style="background-image:url('images/work06.webp')"><span class="work-no">09</span><span class="view-tag">DETAIL ↗</span></a>
+        <a class="work-card" href="javascript:void(0)" data-id="04" data-cat="EDITORIAL DESIGN" data-images="work01-1.webp,work01-2.webp,work01-3.webp,work01-4.webp,work01-5.webp,work01-6.webp,work01-7.webp,work01-8.webp,work01-9.webp,work01-10.webp,work01-11.webp" style="background-image:url('images/work01.webp')"><span class="work-no">04</span><span class="view-tag">DETAIL ↗</span></a>
+        <a class="work-card" href="javascript:void(0)" data-id="05" data-cat="EDITORIAL DESIGN" data-images="work02-1.webp,work02-2.webp,work02-3.webp,work02-4.webp,work02-5.webp,work02-6.webp,work02-7.webp,work02-8.webp,work02-9.webp,work02-10.webp,work02-11.webp" style="background-image:url('images/work02.webp')"><span class="work-no">05</span><span class="view-tag">DETAIL ↗</span></a>
+        <a class="work-card" href="javascript:void(0)" data-id="06" data-cat="EDITORIAL DESIGN" data-images="work03-1.webp,work03-2.webp,work03-3.webp,work03-4.webp,work03-5.webp,work03-6.webp,work03-7.webp,work03-8.webp,work03-9.webp,work03-10.webp,work03-11.webp" style="background-image:url('images/work03.webp')"><span class="work-no">06</span><span class="view-tag">DETAIL ↗</span></a>
+        <a class="work-card" href="javascript:void(0)" data-id="07" data-cat="EDITORIAL DESIGN" data-images="work04-1.webp,work04-2.webp,work04-3.webp,work04-4.webp,work04-5.webp,work04-6.webp,work04-7.webp,work04-8.webp,work04-9.webp,work04-10.webp" style="background-image:url('images/work04.webp')"><span class="work-no">07</span><span class="view-tag">DETAIL ↗</span></a>
+        <a class="work-card" href="javascript:void(0)" data-id="08" data-cat="EDITORIAL DESIGN" data-images="work05-1.webp,work05-2.webp,work05-3.webp,work05-4.webp,work05-5.webp,work05-6.webp,work05-7.webp" style="background-image:url('images/work05.webp')"><span class="work-no">08</span><span class="view-tag">DETAIL ↗</span></a>
+        <a class="work-card" href="javascript:void(0)" data-id="09" data-cat="EDITORIAL DESIGN" data-images="work06-1.webp,work06-2.webp,work06-3.webp,work06-4.webp,work06-5.webp,work06-6.webp" style="background-image:url('images/work06.webp')"><span class="work-no">09</span><span class="view-tag">DETAIL ↗</span></a>
       </div>
       <div class="grid-divider"></div>
 
@@ -883,7 +716,27 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
 
 <script>
 (function(){
-  function detailHTML(company, year, edition, role){
+  /* ★ detailHTML : approach + website 옵션 지원 */
+  function detailHTML(company, year, edition, role, approach, website){
+    const approachRow = approach ? `
+      <div class="extra-row approach-row">
+        <div class="extra-label">DESIGN<br/>APPROACH</div>
+        <div class="extra-content">
+          ${approach.map(function(p){ return `<p class="extra-body">${p}</p>`; }).join('')}
+        </div>
+      </div>
+    ` : '';
+    const websiteRow = website ? `
+      <div class="extra-row website-row">
+        <div class="extra-label">WEBSITE</div>
+        <div class="extra-content">
+          <a class="website-link" href="${website.href}" target="_blank" rel="noopener noreferrer">
+            <span class="website-name">${website.label}</span>
+            <span class="website-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    ` : '';
     return `
       <div class="extra-row">
         <div class="extra-label">COMPANY</div>
@@ -899,6 +752,32 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
         <div class="extra-label">ROLE</div>
         <div class="extra-content"><p class="extra-tags">${role}</p></div>
       </div>
+      ${approachRow}
+      ${websiteRow}
+    `;
+  }
+
+  /* ★ 01~03 전용 웹사이트 정보 */
+  const WEBSITE_DATA = {
+    "01": { href:"http://www.kswgroup.co.kr", label:"케이에스더블유 공식 웹사이트 ↗" },
+    "02": { href:"http://www.ksgdw.com",      label:"KS벽지 공식 웹사이트 ↗" },
+    "03": { href:"http://www.miracle-i.com",  label:"미라클여성의원 공식 웹사이트 ↗" }
+  };
+
+  /* ★ 웹사이트 링크를 기존 extra 뒤에 붙이는 헬퍼 */
+  function appendWebsiteRow(id, extraHTML){
+    const w = WEBSITE_DATA[id];
+    if (!w) return extraHTML;
+    return extraHTML + `
+      <div class="extra-row website-row">
+        <div class="extra-label">WEBSITE</div>
+        <div class="extra-content">
+          <a class="website-link" href="${w.href}" target="_blank" rel="noopener noreferrer">
+            <span class="website-name">${w.label}</span>
+            <span class="website-arrow">↗</span>
+          </a>
+        </div>
+      </div>
     `;
   }
 
@@ -906,7 +785,7 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     "01": {
       title: "케이에스더블유 CI", year: "2024",
       role: "Corporate Identity, Graphic Design, Art Direction",
-      extra: `
+      extra: appendWebsiteRow("01", `
         <div class="extra-row"><div class="extra-label">CONCEPT</div><div class="extra-content">
           <p class="extra-body">
             벽지를 한 폭씩 이어 붙이는 시공 방식에서 착안하여 ‘K’의 형태를 여러 개의 면으로 분할하고 유기적으로 연결했습니다.<br/>
@@ -920,12 +799,12 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
             <div class="color-block"><div class="color-chip red"></div><div class="color-text"><div class="color-name">RED</div><div class="color-cmyk">[ C 33, M 100, Y 94, K 0 ]</div></div></div>
           </div>
         </div></div>
-      `
+      `)
     },
     "02": {
       title: "KS벽지 CI", year: "2019",
       role: "Corporate Identity, Graphic Design, Website Art Direction",
-      extra: `
+      extra: appendWebsiteRow("02", `
         <div class="extra-row"><div class="extra-label">CONCEPT</div><div class="extra-content">
           <p class="extra-body">
             K와 S를 하나의 형태로 결합하고, 이를 집과 공간을 상징하는 프레임 안에 담았습니다.<br/>
@@ -943,12 +822,12 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
             Black을 CI의 기본 컬러로 설정하여 KS벽지만의 간결하고 견고한 이미지를 구축하고, Orange를 포인트 컬러로 활용해 디지털과 오프라인 매체에 활기를 더했습니다.
           </p>
         </div></div>
-      `
+      `)
     },
     "03": {
       title: "미라클여성의원", year: "2024",
       role: "CI Design · Brand Direction · Website Planning · Art Direction · Space Direction",
-      extra: `
+      extra: appendWebsiteRow("03", `
         <div class="extra-row"><div class="extra-label">CONCEPT</div><div class="extra-content">
           <p class="extra-body">
             미라클(Miracle)의 첫 글자 ‘M’을 모티프로 생명을 상징하는 심볼을 개발했습니다.<br/>
@@ -966,7 +845,7 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
             </p>
           </div>
         </div></div>
-      `
+      `)
     },
 
     "04": {
@@ -976,7 +855,12 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
       styleClass: "t-style-a",
       extra: detailHTML(
         "케이에스더블유", "2026", "Domestic",
-        "Collection Planning · BI Design · Interior Image Selection · Wallpaper Mapping · Editorial Design · Print Production"
+        "Collection Planning · BI Design · Interior Image Selection · Wallpaper Mapping · Editorial Design · Print Production",
+        [
+          "고가·고후도·고강도 벽지의 특성을 시각적으로 전달하기 위해, 견본책의 전체 비주얼을 무게감 있고 고급스러운 방향으로 설정했습니다.",
+          "브랜드 네이밍과 로고 개발에서는 일반적인 Grand에서 벗어나 GranD로 표현하고, Grand Deep Texture라는 슬로건을 연결해 제품의 두께감과<br/>깊이 있는 질감을 브랜드 언어로 확장했습니다.",
+          "또한 프리미엄 벽지 시장의 대표 브랜드인 ‘디아망(Diamant)’의 발음과 어감을 고려해 ‘그란디’가 아닌 ‘그랑디’로 네이밍하여,<br/>보다 고급스럽고 차별화된 브랜드 이미지를 구축했습니다."
+        ]
       )
     },
     "05": {
@@ -986,7 +870,11 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
       styleClass: "t-style-a",
       extra: detailHTML(
         "케이에스더블유", "2025", "Domestic",
-        "Collection Planning · Interior Image Selection · Wallpaper Mapping · Editorial Design · Print Production"
+        "Collection Planning · Interior Image Selection · Wallpaper Mapping · Editorial Design · Print Production",
+        [
+          "회벽과 원단 등 다양한 질감을 중심으로 구성된 질감형 컬렉션의 특성을 살리면서, 무겁고 딥한 인상보다는 밝고 자연스러운 분위기를 중심으로<br/>견본책의 비주얼을 구성했습니다.",
+          "그래픽에서는 블랙의 사용을 배제하고 밝은 톤을 유지했으며, 돌·바위 등 자연 소재의 이미지를 활용해 제품의 입체적인 질감과 소재감이<br/>자연스럽게 연상되도록 했습니다. 특히 최신 인테리어 트렌드를 반영한 가구·소품·공간 스타일을 고려해 인테리어 컷을 세심하게 선정하고,<br/>각 벽지의 특성이 실제 공간에서 자연스럽게 표현되도록 맵핑과 지면을 구성했습니다."
+        ]
       )
     },
     "06": {
@@ -996,11 +884,15 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
       styleClass: "t-style-a",
       extra: detailHTML(
         "제일벽지, 코스모스벽지", "2024", "Domestic",
-        "Collection Planning · BI Design · Interior Image Selection · Wallpaper Mapping · Editorial Design · Print Production"
+        "Collection Planning · BI Design · Interior Image Selection · Wallpaper Mapping · Editorial Design · Print Production",
+        [
+          "기존 저가 실크벽지 중심의 제품군에서 벗어나 회벽·페인트·스톤·패브릭 등 다양한 질감과 볼륨감을 갖춘 중고가 실크벽지 브랜드의 첫 출시를 앞두고,<br/>제품의 가격대보다 한 단계 높은 프리미엄 이미지를 전달하는 데 중점을 두었습니다.",
+          "기존 ‘제이 프리미엄(J Premium)’에서 ‘제이 플래티넘(J Platinum)’으로 네이밍을 변경해 브랜드의 고급스러운 포지셔닝을 강화하고,<br/>타사의 프리미엄 브랜드를 벤치마킹해 표지부터 고급 원단 싸바리 제본을 적용했습니다.",
+          "내지는 블랙을 적극적으로 활용한 중후하고 깊이 있는 그래픽과 풍부한 색감을 중심으로 구성하고, 제품의 볼륨감과 다양한 소재 질감이 고급스럽게 전달될 수 있도록 인테리어 이미지와 지면을 디자인했습니다."
+        ]
       )
     },
 
-    /* ★ 07번 : Vimeo 영상 삽입 */
     "07": {
       titleHTML: `<span class="title-sub">The Art of Gravure</span><span class="title-main">DARAE</span>`,
       title: "The Art of Gravure DARAE",
@@ -1009,9 +901,14 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
       vimeo: "1229381553",
       extra: detailHTML(
         "KS벽지", "2022", "Export",
-        "Collection Planning · Interior Image Selection · Wallpaper Mapping · Editorial Design · Print Production"
+        "Collection Planning · Art Direction · Styling · Concept Shooting · Teaser Video Production · Editorial Design · Print Production",
+        [
+          "중동 및 아시아 수출 시장을 대상으로, 기존의 인테리어 공간 중심 견본책에서 벗어나 벽지 자체를 하나의 작품처럼 보여주는 새로운 비주얼 방식을 시도했습니다. 벽지를 세 가지 컨셉으로 나누어 각각의 분위기에 맞는 소품과 컬러, 오브제를 직접 구성하고 셀프 스튜디오를 대여해 촬영까지 진행했습니다.",
+          "벽지를 다양한 방식으로 조합하고 소품과 함께 연출해, 단순히 공간 속 벽지를 보여주는 것을 넘어 벽지 자체의 패턴과 소재감을 하나의 이미지로 완성하는 방향으로 내지를 디자인했습니다."
+        ]
       )
     },
+
     "08": {
       titleHTML: `<span class="title-sub">The Art of Inspiration</span><span class="title-main">AURORA</span>`,
       title: "The Art of Inspiration AURORA",
@@ -1019,9 +916,14 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
       styleClass: "t-style-b",
       extra: detailHTML(
         "KS벽지", "2021", "Export",
-        "Collection Planning · Interior Image Selection · Wallpaper Mapping · Editorial Design · Print Production"
+        "Collection Planning · Interior Image Selection · Wallpaper Mapping · Editorial Design · Print Production",
+        [
+          "신규 출시 컬렉션의 이름인 ‘AURORA’가 가진 신비롭고 빛나는 이미지를 견본책 전반의 비주얼 컨셉으로 확장했습니다. 표지부터 오로라를 연상시키는 컬러를 적용하고, 내지에는 메탈 별색을 활용해 빛의 느낌과 컬렉션의 신비로운 분위기를 일관되게 표현했습니다.",
+          "다래가 벽지 자체의 조형적인 표현에 집중했다면, AURORA에서는 제품과 공간의 조화를 보여주는 인테리어 컷을 중심으로 구성하고, 각각의 벽지에 어울리는 공간과 분위기를 선별해 제품의 적용성을 직관적으로 전달했습니다."
+        ]
       )
     },
+
     "09": {
       titleHTML: `<span class="title-sub">Ready for your new life</span><span class="title-main">MYSTIC</span>`,
       title: "Ready for your new life MYSTIC",
@@ -1029,7 +931,11 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
       styleClass: "t-style-b",
       extra: detailHTML(
         "Bemax", "2023", "Export",
-        "Collection Planning · Interior Image Selection · Wallpaper Mapping · Editorial Design · Print Production"
+        "Collection Planning · Interior Image Selection · Wallpaper Mapping · Editorial Design · Print Production",
+        [
+          "수출용 견본책의 중간 섹션에 새로운 시각적 리듬을 만들기 위해, 모던하고 간결한 그래픽을 기반으로 한 비주얼 방향을 설정했습니다.",
+          "표지는 모던한 디자인에 세네카의 은홀로박 후가공을 적용해 빛에 따라 변화하는 포인트를 주었으며, 내지에서는 기존의 인테리어 컷 중심 구성에서 벗어나 이미지를 풀컷으로 과감하게 활용했습니다. 제품을 설명하는 지면 사이에 시각적인 임팩트와 변화를 주어, 견본책을 넘기는 과정에서 새로운 섹션을 만나는 듯한 재미와 리듬감을 느낄 수 있도록 구성했습니다."
+        ]
       )
     },
 
@@ -1117,6 +1023,9 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     `;
   }
 
+  /* ============================================================
+     ★ 히어로 패럴랙스
+     ============================================================ */
   const hero = document.getElementById('hero');
   const heroBg = document.getElementById('heroBg');
   const heroText = document.getElementById('heroContent');
@@ -1141,6 +1050,9 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     update();
   }
 
+  /* ============================================================
+     ★ DOM 참조
+     ============================================================ */
   const modal = document.getElementById('modal');
   const modalTopbar = document.getElementById('modalTopbar');
   const modalPre = document.getElementById('modalPre');
@@ -1172,7 +1084,6 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     sliding = false;
   }
 
-  /* ★ Vimeo iframe 넣기 */
   function setVideoOn(){
     if (!currentVimeo){
       videoSlot.innerHTML = '';
@@ -1194,6 +1105,13 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     modalImage.classList.remove('is-video');
   }
 
+  /* ============================================================
+     ★ 일반 슬라이드 모드 (영상이 마지막 슬롯)
+     ============================================================ */
+  function isVideoIndex(idx){
+    return currentVimeo && idx === thumbSrcs.length - 1;
+  }
+
   function slideTo(nextIdx, direction){
     if (sliding) return;
     if (nextIdx < 0 || nextIdx >= thumbSrcs.length) return;
@@ -1203,20 +1121,15 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     const currSrc = thumbSrcs[currentThumb];
     const nextSrc = thumbSrcs[nextIdx];
 
-    const isNextVideo = (nextIdx === 0 && currentVimeo);
-    const isCurrVideo = (currentThumb === 0 && currentVimeo);
+    const isNextVideo = isVideoIndex(nextIdx);
+    const isCurrVideo = isVideoIndex(currentThumb);
 
     if (isNextVideo || isCurrVideo){
       currentThumb = nextIdx;
       thumbs.forEach((t, idx)=> t.classList.toggle('active', idx === nextIdx));
       updateImgNav();
-
-      if (isNextVideo){
-        setVideoOn();
-      } else {
-        clearVideo();
-        modalImage.style.backgroundImage = `url('${nextSrc}')`;
-      }
+      if (isNextVideo){ setVideoOn(); }
+      else { clearVideo(); modalImage.style.backgroundImage = `url('${nextSrc}')`; }
       sliding = false;
       return;
     }
@@ -1237,9 +1150,7 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     updateImgNav();
 
     inLayer.addEventListener('animationend', ()=>{
-      outLayer.remove();
-      inLayer.remove();
-      sliding = false;
+      outLayer.remove(); inLayer.remove(); sliding = false;
     });
     setTimeout(()=>{
       if (outLayer.parentNode) outLayer.remove();
@@ -1253,18 +1164,15 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     currentThumb = i;
     thumbs.forEach((t, idx)=> t.classList.toggle('active', idx === i));
     updateImgNav();
-
-    if (i === 0 && currentVimeo){
-      setVideoOn();
-    } else {
-      clearVideo();
-      modalImage.style.backgroundImage = `url('${thumbSrcs[i]}')`;
-    }
+    if (isVideoIndex(i)){ setVideoOn(); }
+    else { clearVideo(); modalImage.style.backgroundImage = `url('${thumbSrcs[i]}')`; }
   }
+
   function updateImgNav(){
     imgPrev.disabled = currentThumb <= 0;
     imgNext.disabled = currentThumb >= thumbSrcs.length - 1;
   }
+
   function bindActivate(el, handler){
     if (!el) return;
     let touched = false;
@@ -1278,8 +1186,8 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     }, {passive:false});
   }
 
-  bindActivate(imgPrev, ()=> slideTo(currentThumb - 1, 'prev'));
-  bindActivate(imgNext, ()=> slideTo(currentThumb + 1, 'next'));
+  bindActivate(imgPrev, ()=>{ slideTo(currentThumb - 1, 'prev'); });
+  bindActivate(imgNext, ()=>{ slideTo(currentThumb + 1, 'next'); });
 
   modalThumbs.addEventListener('click', e=>{
     const thumb = e.target.closest('.thumb');
@@ -1290,6 +1198,9 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     }
   });
 
+  /* ============================================================
+     ★ 모달 렌더 (영상은 항상 마지막 슬롯)
+     ============================================================ */
   function renderModal(card){
     clearSlideLayers();
     clearVideo();
@@ -1310,6 +1221,14 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     modalThirty.style.display = 'none';
 
     const data = PROJECT_DATA[id];
+
+    const size1632Ids = ["01","02","03","04","05","06"];
+    if (size1632Ids.indexOf(id) !== -1){
+      modalImage.classList.add('size-1632');
+    } else {
+      modalImage.classList.remove('size-1632');
+    }
+
     modalNum.textContent = '';
 
     modalTitle.classList.remove('t-style-a', 't-style-b');
@@ -1318,15 +1237,15 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     if (data && data.titleHTML){
       modalTitle.innerHTML = data.titleHTML;
     } else {
-      modalTitle.textContent = data && data.title ? data.title : ('프로젝트 제목 ' + id);
+      modalTitle.textContent = (data && data.title) ? data.title : (card.dataset.cat || '');
     }
 
     if (data && data.hideMeta){
       modalMeta.classList.add('hide');
     } else {
       modalMeta.classList.remove('hide');
-      modalYear.textContent = data && data.year ? data.year : '2024';
-      modalRole.textContent = data && data.role ? data.role : 'Brand Identity, Art Direction';
+      modalYear.textContent = (data && data.year) ? data.year : '';
+      modalRole.textContent = (data && data.role) ? data.role : '';
     }
 
     if (data && data.extra){
@@ -1339,223 +1258,188 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
 
     currentVimeo = (data && data.vimeo) ? data.vimeo : null;
 
-    modalThumbs.innerHTML = '';
-    thumbs = []; thumbSrcs = [];
-
+    /* ★ 이미지 먼저, 영상은 마지막에 push */
+    thumbSrcs = [];
+    imageList.forEach(function(src){
+      thumbSrcs.push('images/' + src);
+    });
     if (currentVimeo){
-      const vThumb = document.createElement('div');
-      vThumb.className = 'thumb video-thumb active';
-      vThumb.dataset.video = '1';
-      modalThumbs.appendChild(vThumb);
-      thumbs.push(vThumb);
-      thumbSrcs.push('__VIDEO__');
+      thumbSrcs.push('');   /* 마지막 = 영상 */
     }
 
-    imageList.forEach((filename, idx)=>{
-      const div = document.createElement('div');
-      div.className = 'thumb' + ((thumbs.length === 0 && idx === 0) ? ' active' : '');
-      const fullPath = 'images/' + filename;
-      div.dataset.src = fullPath;
-      div.style.backgroundImage = `url('${fullPath}')`;
-      modalThumbs.appendChild(div);
-      thumbs.push(div);
-      thumbSrcs.push(fullPath);
+    modalThumbs.innerHTML = '';
+    thumbs = [];
+    thumbSrcs.forEach(function(src, idx){
+      const t = document.createElement('div');
+      t.className = 'thumb';
+      if (currentVimeo && idx === thumbSrcs.length - 1){
+        t.classList.add('video-thumb');
+      } else if (src){
+        t.style.backgroundImage = "url('" + src + "')";
+      }
+      modalThumbs.appendChild(t);
+      thumbs.push(t);
     });
 
     currentThumb = 0;
-    if (currentVimeo){
-      setVideoOn();
+    if (thumbSrcs.length && thumbSrcs[0]){
+      modalImage.style.backgroundImage = "url('" + thumbSrcs[0] + "')";
     } else {
-      modalImage.style.backgroundImage = thumbSrcs.length ? `url('${thumbSrcs[0]}')` : '';
+      modalImage.style.backgroundImage = '';
     }
+    thumbs.forEach(function(t, idx){ t.classList.toggle('active', idx === 0); });
     updateImgNav();
   }
 
-  let activeAudio = null;
-
-  function fmt(t){
-    t = Math.max(0, Math.floor(t || 0));
-    const m = String(Math.floor(t/60)).padStart(2,'0');
-    const s = String(t%60).padStart(2,'0');
-    return `${m}:${s}`;
-  }
+  /* ============================================================
+     ★ 라디오 오디오 플레이어
+     ============================================================ */
+  let currentAudio = null;
+  let currentAudioBtn = null;
 
   function bindAudioPlayers(){
-    document.querySelectorAll('.m30-audio-btn').forEach(btn=>{
+    const items = modalThirty.querySelectorAll('.m30-radio-item');
+    items.forEach(function(item){
+      const btn = item.querySelector('.m30-audio-btn');
+      const track = item.querySelector('.m30-audio-track');
+      const fill = item.querySelector('.m30-audio-fill');
+      const knob = item.querySelector('.m30-audio-knob');
+      const timeEl = item.querySelector('.m30-audio-time');
+      const src = btn ? btn.dataset.audio : null;
+      if (!src) return;
+
+      const audio = new Audio(src);
+      audio.preload = 'metadata';
+
+      function fmt(sec){
+        if (!isFinite(sec)) sec = 0;
+        const m = Math.floor(sec / 60);
+        const s = Math.floor(sec % 60);
+        return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+      }
+      function setPlayIcon(){
+        btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+      }
+      function setPauseIcon(){
+        btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>';
+      }
+      function updateTime(){
+        const cur = audio.currentTime || 0;
+        const dur = audio.duration || 0;
+        timeEl.textContent = fmt(cur) + ' / ' + fmt(dur);
+        const pct = dur ? (cur / dur) * 100 : 0;
+        fill.style.width = pct + '%';
+        knob.style.left = pct + '%';
+      }
+
       btn.addEventListener('click', function(){
-        const src = btn.dataset.audio;
-        const item = btn.closest('.m30-radio-item');
-        const fill = item.querySelector('.m30-audio-fill');
-        const knob = item.querySelector('.m30-audio-knob');
-        const track = item.querySelector('.m30-audio-track');
-        const timeLabel = item.querySelector('.m30-audio-time');
-        const icon = btn.querySelector('svg');
-        if (!src) return;
-
-        if (activeAudio && activeAudio.el === btn && !activeAudio.audio.paused){
-          activeAudio.audio.pause();
-          icon.innerHTML = '<path d="M8 5v14l11-7z"/>';
-          return;
+        if (currentAudio && currentAudio !== audio){
+          currentAudio.pause();
+          if (currentAudioBtn) currentAudioBtn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
         }
-        if (activeAudio && activeAudio.el !== btn){
-          activeAudio.audio.pause();
-          activeAudio.el.querySelector('svg').innerHTML = '<path d="M8 5v14l11-7z"/>';
-          activeAudio = null;
-        }
-        const audio = new Audio(src);
-        activeAudio = { audio, el: btn };
-        audio.addEventListener('timeupdate', ()=>{
-          if (audio.duration){
-            fill.style.width = (audio.currentTime / audio.duration) * 100 + '%';
-            knob.style.left = (audio.currentTime / audio.duration) * 100 + '%';
-            timeLabel.textContent = `${fmt(audio.currentTime)} / ${fmt(audio.duration)}`;
-          }
-        });
-        audio.addEventListener('ended', ()=>{
-          icon.innerHTML = '<path d="M8 5v14l11-7z"/>';
-          fill.style.width = '0%';
-          knob.style.left = '0%';
-          timeLabel.textContent = '00:00 / 00:20';
-          activeAudio = null;
-        });
-        audio.addEventListener('error', ()=>{
-          icon.innerHTML = '<path d="M8 5v14l11-7z"/>';
-          timeLabel.textContent = '00:00 / 00:20';
-        });
-        audio.play().then(()=>{
-          icon.innerHTML = '<path d="M6 5h4v14H6zm8 0h4v14h-4z"/>';
-        }).catch(()=>{
-          icon.innerHTML = '<path d="M8 5v14l11-7z"/>';
-        });
-
-        let dragging = false;
-        let wasPlaying = false;
-
-        function posToTime(clientX){
-          const rect = track.getBoundingClientRect();
-          let ratio = (clientX - rect.left) / rect.width;
-          ratio = Math.max(0, Math.min(1, ratio));
-          const dur = audio.duration || 0;
-          return ratio * dur;
-        }
-        function setVisual(t){
-          const dur = audio.duration || 1;
-          const ratio = Math.max(0, Math.min(1, t / dur));
-          fill.style.width = (ratio * 100) + '%';
-          knob.style.left = (ratio * 100) + '%';
-          const total = audio.duration || 20;
-          timeLabel.textContent = `${fmt(t)} / ${fmt(total)}`;
-        }
-        function onDown(e){
-          if (!audio.duration) return;
-          dragging = true;
-          wasPlaying = !audio.paused;
-          track.classList.add('dragging');
+        if (audio.paused){
+          audio.play();
+          setPauseIcon();
+          currentAudio = audio;
+          currentAudioBtn = btn;
+        } else {
           audio.pause();
-          const clientX = (e.touches ? e.touches[0].clientX : e.clientX);
-          const t = posToTime(clientX);
-          setVisual(t);
-          e.preventDefault();
+          setPlayIcon();
         }
-        function onMove(e){
-          if (!dragging) return;
-          const clientX = (e.touches ? e.touches[0].clientX : e.clientX);
-          const t = posToTime(clientX);
-          setVisual(t);
-          e.preventDefault();
-        }
-        function onUp(e){
-          if (!dragging) return;
-          dragging = false;
-          track.classList.remove('dragging');
-          const clientX = (e.changedTouches ? e.changedTouches[0].clientX : (e.clientX));
-          const t = posToTime(clientX);
-          try { audio.currentTime = t; } catch(err){}
-          setVisual(t);
-          if (wasPlaying){
-            audio.play().then(()=>{
-              icon.innerHTML = '<path d="M6 5h4v14H6zm8 0h4v14h-4z"/>';
-            }).catch(()=>{});
-          }
-        }
-
-        track.addEventListener('mousedown', onDown);
-        window.addEventListener('mousemove', onMove);
-        window.addEventListener('mouseup', onUp);
-
-        track.addEventListener('touchstart', onDown, {passive:false});
-        window.addEventListener('touchmove', onMove, {passive:false});
-        window.addEventListener('touchend', onUp);
-        window.addEventListener('touchcancel', onUp);
       });
+
+      audio.addEventListener('timeupdate', updateTime);
+      audio.addEventListener('loadedmetadata', updateTime);
+      audio.addEventListener('ended', function(){
+        setPlayIcon();
+        audio.currentTime = 0;
+        updateTime();
+      });
+
+      function seekFromEvent(e){
+        const rect = track.getBoundingClientRect();
+        const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+        const ratio = Math.max(0, Math.min(1, x / rect.width));
+        if (audio.duration) audio.currentTime = ratio * audio.duration;
+        updateTime();
+      }
+      let dragging = false;
+      track.addEventListener('mousedown', function(e){ dragging = true; track.classList.add('dragging'); seekFromEvent(e); });
+      window.addEventListener('mousemove', function(e){ if (dragging) seekFromEvent(e); });
+      window.addEventListener('mouseup', function(){ dragging = false; track.classList.remove('dragging'); });
+      track.addEventListener('touchstart', function(e){ dragging = true; track.classList.add('dragging'); seekFromEvent(e); }, {passive:true});
+      track.addEventListener('touchmove', function(e){ if (dragging) seekFromEvent(e); }, {passive:true});
+      track.addEventListener('touchend', function(){ dragging = false; track.classList.remove('dragging'); });
     });
   }
 
+  /* ============================================================
+     ★ 모달 열기 / 닫기 / 네비게이션
+     ============================================================ */
   function openModal(card){
-    clearSlideLayers();
-    document.body.classList.add('modal-open');
-
     currentIndex = clickableCards.indexOf(card);
     renderModal(card);
-    updateNavState();
     modal.classList.add('open');
     modalTopbar.classList.add('show');
+    document.body.classList.add('modal-open');
     document.body.style.overflow = 'hidden';
     modal.scrollTop = 0;
+    updateNavState();
   }
-  function updateNavState(){
-    modalNext.classList.toggle('disabled', currentIndex >= clickableCards.length - 1);
-    modalPre.classList.toggle('disabled', currentIndex <= 0);
-  }
-  function goPrevProject(){
-    if (currentIndex <= 0) return;
-    currentIndex--; renderModal(clickableCards[currentIndex]); updateNavState(); modal.scrollTop = 0;
-  }
-  function goNextProject(){
-    if (currentIndex >= clickableCards.length - 1) return;
-    currentIndex++; renderModal(clickableCards[currentIndex]); updateNavState(); modal.scrollTop = 0;
-  }
-  function closeModal(){
-    clearSlideLayers();
-    clearVideo();
-    currentVimeo = null;
-    document.body.classList.remove('modal-open');
 
+  function closeModal(){
     modal.classList.remove('open');
     modalTopbar.classList.remove('show');
+    document.body.classList.remove('modal-open');
     document.body.style.overflow = '';
-    if (activeAudio && activeAudio.audio){ activeAudio.audio.pause(); activeAudio = null; }
-  }
-  function goHome(){
-    const card = clickableCards[currentIndex];
-    closeModal();
-    if (card){
-      requestAnimationFrame(()=>{
-        requestAnimationFrame(()=>{
-          card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-      });
-    }
+    clearVideo();
+    clearSlideLayers();
+    if (currentAudio){ currentAudio.pause(); currentAudio = null; currentAudioBtn = null; }
+    modalImage.classList.remove('size-1632', 'is-video');
   }
 
-  clickableCards.forEach(card=> bindActivate(card, ()=> openModal(card)));
-  bindActivate(modalPre,  ()=> goPrevProject());
-  bindActivate(modalHome, ()=> goHome());
-  bindActivate(modalNext, ()=> goNextProject());
+  function updateNavState(){
+    modalPre.disabled = currentIndex <= 0;
+    modalNext.disabled = currentIndex >= clickableCards.length - 1;
+  }
 
-  modal.addEventListener('click', e=>{ if (e.target === modal) closeModal(); });
+  clickableCards.forEach(function(card){
+    bindActivate(card, function(){
+      openModal(card);
+    });
+  });
 
-  document.addEventListener('keydown', e=>{
-    if (!modal.classList.contains('open')) return;
-    if (e.key === 'Escape') closeModal();
-    if (e.key === 'ArrowRight') {
-      if (currentThumb < thumbSrcs.length - 1) slideTo(currentThumb + 1, 'next');
-      else goNextProject();
-    }
-    if (e.key === 'ArrowLeft') {
-      if (currentThumb > 0) slideTo(currentThumb - 1, 'prev');
+  bindActivate(modalPre, function(){
+    if (currentIndex > 0){
+      currentIndex--;
+      renderModal(clickableCards[currentIndex]);
+      modal.scrollTop = 0;
+      updateNavState();
     }
   });
+  bindActivate(modalNext, function(){
+    if (currentIndex < clickableCards.length - 1){
+      currentIndex++;
+      renderModal(clickableCards[currentIndex]);
+      modal.scrollTop = 0;
+      updateNavState();
+    }
+  });
+  bindActivate(modalHome, function(){
+    closeModal();
+  });
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    if (!modal.classList.contains('open')) return;
+    if (e.key === 'ArrowLeft') slideTo(currentThumb - 1, 'prev');
+    if (e.key === 'ArrowRight') slideTo(currentThumb + 1, 'next');
+  });
+
+  modal.addEventListener('click', function(e){
+    if (e.target === modal) closeModal();
+  });
+
 })();
 </script>
 </body>
