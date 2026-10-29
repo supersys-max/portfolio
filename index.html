@@ -324,7 +324,6 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
 
 .extra-tags{font-family:Inter,sans-serif;font-size:13px;font-weight:400;letter-spacing:.054em;color:#555;margin:0;text-align:left;line-height:1.3;padding-top:2px;}
 
-/* ★ WEBSITE 링크 (한글 라벨 + 화살표) */
 .website-row .extra-content{ padding-top:2px; }
 .website-link{
   display:inline-flex;align-items:center;gap:10px;
@@ -400,8 +399,38 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
 .m30-tv-meta{font-family:Inter,sans-serif;font-size:12px;font-weight:500;letter-spacing:.09em;color:#888;text-align:center;margin:0 0 24px;line-height:1.3;}
 .m30-tv-meta .m30-year{font-weight:700;color:#333;margin-right:14px;letter-spacing:.126em}
 .m30-tv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:980px;margin:0 auto 24px}
-.m30-tv-slot{aspect-ratio:16/9;background:#d6d6d4;border:1px solid var(--line);border-radius:10px;background-position:center;background-size:cover;background-repeat:no-repeat;position:relative;overflow:hidden}
+.m30-tv-slot{aspect-ratio:5/4;background:#d6d6d4;border:1px solid var(--line);border-radius:10px;background-position:center;background-size:cover;background-repeat:no-repeat;position:relative;overflow:hidden}
 .m30-tv-desc{font-family:"Noto Sans KR",sans-serif;font-size:13.5px;line-height:1.55;letter-spacing:-.004em;color:#555;max-width:720px;margin:0 auto;text-align:center;}
+
+/* ★ 33번 전용: 스포츠 후원 섹션 스타일 */
+.m33-sports-section{margin-top:56px;padding-top:40px;border-top:1px solid var(--line);text-align:center}
+.m33-sports-section:first-of-type{margin-top:0;padding-top:0;border-top:none}
+.m33-sports-head{font-family:Inter,sans-serif;font-size:16px;font-weight:700;letter-spacing:.126em;color:var(--text);margin:0 0 10px;line-height:1.3;}
+.m33-sports-meta{font-family:Inter,sans-serif;font-size:12px;font-weight:500;letter-spacing:.09em;color:#888;text-align:center;margin:0 0 24px;line-height:1.3;}
+.m33-sports-meta .m33-year{font-weight:700;color:#333;margin-right:14px;letter-spacing:.126em}
+
+/* ★ 두 섹션 모두 한 줄 + 동일한 썸네일 크기 + 가운데 정렬 */
+.m33-sports-grid{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  max-width:980px;
+  margin:0 auto 24px;
+}
+.m33-sports-slot{
+  flex:none;
+  width:230px;
+  aspect-ratio:5/4;
+  background:#d6d6d4;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  position:relative;
+  overflow:hidden;
+}
 
 .approach-row .extra-content{ padding-top:0; }
 .approach-row .extra-body{ margin:0; }
@@ -500,6 +529,15 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
   .m30-audio-track{width:120px;}
   .m30-tv-grid{grid-template-columns:1fr;}
 
+  /* ★ 33번 모바일: 한 줄 유지 + 썸네일 크기 통일 + 가운데 정렬 */
+  .m33-sports-grid{
+    gap:8px;
+    overflow-x:auto;
+    justify-content:flex-start;
+    padding-bottom:4px;
+  }
+  .m33-sports-slot{width:130px;}
+
   .work-grid.identity .work-card{background-position:center calc(50% + 15px)}
   .work-grid.identity .work-card[data-id="03"]{background-position:center calc(50% + 20px)}
   .work-grid.marketing .work-card[data-id="31"]{background-position:center calc(50% + 20px)}
@@ -595,11 +633,8 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     <div class="work-category">
       <div class="category-head"><h3>IDENTITY DESIGN</h3></div>
       <div class="work-grid identity">
-        <!-- ★ 01 : 4장 -->
         <a class="work-card" href="javascript:void(0)" data-id="01" data-cat="IDENTITY DESIGN" data-images="id01-1.webp,id01-2.webp,id01-3.webp,id01-4.webp" style="background-image:url('images/id01.webp')"><span class="work-no">01</span><span class="view-tag">DETAIL ↗</span></a>
-        <!-- ★ 02 : 5장 -->
         <a class="work-card" href="javascript:void(0)" data-id="02" data-cat="IDENTITY DESIGN" data-images="id02-1.webp,id02-2.webp,id02-3.webp,id02-4.webp,id02-5.webp" style="background-image:url('images/id02.webp')"><span class="work-no">02</span><span class="view-tag">DETAIL ↗</span></a>
-        <!-- ★ 03 : 5장 -->
         <a class="work-card" href="javascript:void(0)" data-id="03" data-cat="IDENTITY DESIGN" data-images="id03-1.webp,id03-2.webp,id03-3.webp,id03-4.webp,id03-5.webp" style="background-image:url('images/id03.webp')"><span class="work-no">03</span><span class="view-tag">DETAIL ↗</span></a>
       </div>
     </div>
@@ -612,7 +647,6 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
         <a class="work-card" href="javascript:void(0)" data-id="06" data-cat="EDITORIAL DESIGN" data-images="work03-1.webp,work03-2.webp,work03-3.webp,work03-4.webp,work03-5.webp,work03-6.webp,work03-7.webp,work03-8.webp,work03-9.webp,work03-10.webp,work03-11.webp" style="background-image:url('images/work03.webp')"><span class="work-no">06</span><span class="view-tag">DETAIL ↗</span></a>
         <a class="work-card" href="javascript:void(0)" data-id="07" data-cat="EDITORIAL DESIGN" data-images="work04-1.webp,work04-2.webp,work04-3.webp,work04-4.webp,work04-5.webp,work04-6.webp,work04-7.webp,work04-8.webp,work04-9.webp,work04-10.webp" style="background-image:url('images/work04.webp')"><span class="work-no">07</span><span class="view-tag">DETAIL ↗</span></a>
         <a class="work-card" href="javascript:void(0)" data-id="08" data-cat="EDITORIAL DESIGN" data-images="work05-1.webp,work05-2.webp,work05-3.webp,work05-4.webp,work05-5.webp,work05-6.webp,work05-7.webp" style="background-image:url('images/work05.webp')"><span class="work-no">08</span><span class="view-tag">DETAIL ↗</span></a>
-        <!-- ★ 09 : 8장으로 수정 -->
         <a class="work-card" href="javascript:void(0)" data-id="09" data-cat="EDITORIAL DESIGN" data-images="work06-1.webp,work06-2.webp,work06-3.webp,work06-4.webp,work06-5.webp,work06-6.webp,work06-7.webp,work06-8.webp" style="background-image:url('images/work06.webp')"><span class="work-no">09</span><span class="view-tag">DETAIL ↗</span></a>
       </div>
       <div class="grid-divider"></div>
@@ -643,7 +677,7 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
 
     <div class="work-category">
       <div class="category-head"><h3>MARKETING</h3></div>
-      <div class="work-grid marketing">
+      <div class="work-grid small marketing">
         <a class="work-card" href="javascript:void(0)" data-id="30" data-cat="MARKETING" data-images="market01-1.webp,market01-2.webp,market01-3.webp,market01-4.webp" style="background-image:url('images/market01.webp')">
           <span class="work-no">30</span><span class="view-tag">DETAIL ↗</span>
           <span class="work-title-overlay"><span class="wt-main">박수홍 전속모델 계약 프로젝트</span></span>
@@ -656,6 +690,21 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
           <span class="work-no">32</span><span class="view-tag">DETAIL ↗</span>
           <span class="work-title-overlay"><span class="wt-main">3개사 브랜드 광고</span></span>
         </a>
+        <a class="work-card" href="javascript:void(0)" data-id="33" data-cat="MARKETING" data-images="market04-1.webp,market04-2.webp,market04-3.webp,market04-4.webp" style="background-image:url('images/market04.webp')">
+          <span class="work-no">33</span><span class="view-tag">DETAIL ↗</span>
+          <span class="work-title-overlay"><span class="wt-main">스포츠 후원 및 중계광고</span></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ★ CALLIGRAPHY : 디테일 없이 썸네일만 -->
+    <div class="work-category">
+      <div class="category-head"><h3>CALLIGRAPHY</h3></div>
+      <div class="work-grid small">
+        <div class="work-card static" style="background-image:url('images/calli01.webp')"><span class="work-no">40</span></div>
+        <div class="work-card static" style="background-image:url('images/calli02.webp')"><span class="work-no">41</span></div>
+        <div class="work-card static" style="background-image:url('images/calli03.webp')"><span class="work-no">42</span></div>
+        <div class="work-card static" style="background-image:url('images/calli04.webp')"><span class="work-no">43</span></div>
       </div>
     </div>
   </section>
@@ -712,12 +761,12 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
       <div class="modal-extra" id="modalExtra" style="display:none"></div>
     </div>
     <div class="modal-30" id="modalThirty" style="display:none"></div>
+    <div class="modal-33" id="modalThirtyThree" style="display:none"></div>
   </div>
 </div>
 
 <script>
 (function(){
-  /* ★ detailHTML : approach + website 옵션 지원 */
   function detailHTML(company, year, edition, role, approach, website){
     const approachRow = approach ? `
       <div class="extra-row approach-row">
@@ -758,14 +807,12 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     `;
   }
 
-  /* ★ 01~03 전용 웹사이트 정보 */
   const WEBSITE_DATA = {
     "01": { href:"http://www.kswgroup.co.kr", label:"케이에스더블유 공식 웹사이트 ↗" },
     "02": { href:"http://www.ksgdw.com",      label:"KS벽지 공식 웹사이트 ↗" },
     "03": { href:"http://www.miracle-i.com",  label:"미라클여성의원 공식 웹사이트 ↗" }
   };
 
-  /* ★ 웹사이트 링크를 기존 extra 뒤에 붙이는 헬퍼 */
   function appendWebsiteRow(id, extraHTML){
     const w = WEBSITE_DATA[id];
     if (!w) return extraHTML;
@@ -789,15 +836,15 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
       extra: appendWebsiteRow("01", `
         <div class="extra-row"><div class="extra-label">CONCEPT</div><div class="extra-content">
           <p class="extra-body">
-            벽지를 한 폭씩 이어 붙이는 시공 방식에서 착안하여 ‘K’의 형태를 여러 개의 면으로 분할하고 유기적으로 연결했습니다.<br/>
-            벽지가 반복적으로 이어지며 하나의 면을 완성하는 과정을 K의 구조 안에 담아 벽지 전문 기업의 정체성을 표현했습니다.
+            벽지를 한 폭씩 이어 붙이는 시공 방식에서 착안해 K의 형태를 여러 면으로 분할하고 유기적으로 연결했습니다.<br/>
+            각각의 벽지가 이어져 하나의 공간을 완성하듯, 벽지 전문 기업의 정체성을 심볼에 담았습니다.
           </p>
-          <div class="keyword-line">핵심 키워드&nbsp;&nbsp;<b>분할 / 반복 / 연결 / 리듬</b></div>
+          <div class="keyword-line">핵심 키워드&nbsp;&nbsp;<b>벽지 / 전문 / 인테리어 / 신뢰</b></div>
         </div></div>
         <div class="extra-row"><div class="extra-label">COLOR</div><div class="extra-content">
           <div class="color-pair">
-            <div class="color-block"><div class="color-chip navy"></div><div class="color-text"><div class="color-name">NAVY</div><div class="color-cmyk">[ C 100, M 93, Y 53, K 17 ]</div></div></div>
-            <div class="color-block"><div class="color-chip red"></div><div class="color-text"><div class="color-name">RED</div><div class="color-cmyk">[ C 33, M 100, Y 94, K 0 ]</div></div></div>
+            <div class="color-block"><div class="color-chip navy"></div><div class="color-text"><div class="color-name">DEEP NAVY</div><div class="color-cmyk">[ C 100, M 93, Y 53, K 17 ]</div></div></div>
+            <div class="color-block"><div class="color-chip red"></div><div class="color-text"><div class="color-name">VIBRANT RED</div><div class="color-cmyk">[ C 33, M 100, Y 94, K 0 ]</div></div></div>
           </div>
         </div></div>
       `)
@@ -808,11 +855,10 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
       extra: appendWebsiteRow("02", `
         <div class="extra-row"><div class="extra-label">CONCEPT</div><div class="extra-content">
           <p class="extra-body">
-            K와 S를 하나의 형태로 결합하고, 이를 집과 공간을 상징하는 프레임 안에 담았습니다.<br/>
-            K와 S의 각 면은 벽지의 부드럽게 이어지는 표면에서 모티프를 얻어 유연한 곡선과 분할된 구조로 표현했습니다.<br/>
-            기업의 이니셜과 ‘집’이라는 공간의 이미지를 하나의 심볼에 결합하여 KS벽지가 만들어가는 생활 공간의 가치를 담았습니다.
+            K와 S를 결합해 집과 공간을 상징하는 프레임 안에 담았습니다.<br/>
+            벽지의 부드러운 표면에서 착안한 유연한 곡선과 분할된 구조를 통해 KS벽지가 만들어가는 생활 공간의 가치를 표현했습니다.
           </p>
-          <div class="keyword-line">핵심 키워드&nbsp;&nbsp;<b>공간 / 집 / 결합 / 부드러움</b></div>
+          <div class="keyword-line">핵심 키워드&nbsp;&nbsp;<b>신뢰 / 안정 / 공간 / 결합</b></div>
         </div></div>
         <div class="extra-row"><div class="extra-label">COLOR</div><div class="extra-content">
           <div class="color-pair">
@@ -831,11 +877,11 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
       extra: appendWebsiteRow("03", `
         <div class="extra-row"><div class="extra-label">CONCEPT</div><div class="extra-content">
           <p class="extra-body">
-            미라클(Miracle)의 첫 글자 ‘M’을 모티프로 생명을 상징하는 심볼을 개발했습니다.<br/>
+            난임 전문병원인 미라클의원의 첫 글자 'M'을 모티브로 생명을 상징하는 심볼을 개발했습니다.<br/>
             정자와 난자가 만나 새로운 생명으로 이어지는 과정을 M의 구조 안에 은유적으로 담았습니다.<br/>
-            특히 M을 이루는 두 개의 ‘I’가 서로 마주하며 만들어내는 중심의 곡선은 물방울이자, 생명을 품는 자궁과 아기집을 상징합니다.
+            특히 M을 이루는 두 개의 'I'가 서로 마주하며 만들어내는 중심의 곡선은 물방울이자, 생명을 품는 자궁과 아기집을 상징합니다.
           </p>
-          <div class="keyword-line">핵심 키워드&nbsp;&nbsp;<b>만남 / 생명 / 희망 / 시작</b></div>
+          <div class="keyword-line">핵심 키워드&nbsp;&nbsp;<b>난임 / 만남 / 생명 / 희망 / 시작</b></div>
         </div></div>
         <div class="extra-row"><div class="extra-label">COLOR</div><div class="extra-content">
           <div class="color-with-note">
@@ -845,6 +891,9 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
               생명이 피어나는 순간과 새로운 시작에 대한 희망을 표현했습니다.
             </p>
           </div>
+        </div></div>
+        <div class="extra-row"><div class="extra-label">SLOGAN</div><div class="extra-content">
+          <p class="extra-body">기적이 일상이 되는 순간, 미라클여성의원</p>
         </div></div>
       `)
     },
@@ -972,6 +1021,29 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
         </div></div>
         <div class="extra-row"><div class="extra-label">PRODUCTION</div><div class="extra-content"><p class="extra-tags">Shooting Planning &amp; Direction · Art Direction · Advertising Design · Sample Book Application</p></div></div>
       `
+    },
+
+    "33": {
+      title: "스포츠 후원 및 중계광고", year: "2022-2024",
+      role: "Sports Sponsorship · Broadcast Advertising · Graphic Design · Art Direction",
+      extra: `
+        <div class="extra-row"><div class="extra-label">PROJECT</div><div class="extra-content">
+          <p class="extra-body">
+            스포츠 구단 후원과 경기 중계 광고를 통해 브랜드 인지도를 높이고,<br/>
+            스포츠 팬과의 접점을 확대하는 마케팅 프로젝트를 진행했습니다.
+          </p>
+        </div></div>
+        <div class="extra-row"><div class="extra-label">DIRECTION</div><div class="extra-content">
+          <p class="extra-tags">Sports Sponsorship · Broadcast Advertising · Field Branding</p>
+          <p class="extra-body">
+            경기장 내 광고판, 중계 화면 그래픽, 구단 후원 현수막 등 다양한 매체에 브랜드 아이덴티티를 일관되게 적용하고,<br/>
+            스포츠 현장의 역동적인 분위기에 맞춘 비주얼을 디자인했습니다.
+          </p>
+        </div></div>
+        <div class="extra-row"><div class="extra-label">PRODUCTION</div><div class="extra-content">
+          <p class="extra-tags">Broadcast Graphic Design · Field Signage · Sponsorship Collateral</p>
+        </div></div>
+      `
     }
   };
 
@@ -1024,9 +1096,32 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     `;
   }
 
-  /* ============================================================
-     ★ 히어로 패럴랙스
-     ============================================================ */
+  /* ★ 33번: 두 섹션 모두 한 줄, 동일한 썸네일 크기, 가운데 정렬 */
+  function buildThirtyThree(){
+    return `
+      <div class="m30-header"><h2 class="m30-title">스포츠 후원 및 중계광고</h2></div>
+      <div class="m33-sports-section">
+        <h3 class="m33-sports-head">대한씨름협회 공식후원사 광고</h3>
+        <p class="m33-sports-meta"><span class="m33-year">기간: 2022~2024</span></p>
+        <div class="m33-sports-grid">
+          <div class="m33-sports-slot" style="background-image:url('images/market04-1.webp')"></div>
+          <div class="m33-sports-slot" style="background-image:url('images/market04-2.webp')"></div>
+          <div class="m33-sports-slot" style="background-image:url('images/market04-3.webp')"></div>
+          <div class="m33-sports-slot" style="background-image:url('images/market04-4.webp')"></div>
+        </div>
+      </div>
+      <div class="m33-sports-section">
+        <h3 class="m33-sports-head">고양 캐롯 점퍼스 농구단 후원</h3>
+        <p class="m33-sports-meta"><span class="m33-year">기간: 2022~2023</span></p>
+        <div class="m33-sports-grid">
+          <div class="m33-sports-slot" style="background-image:url('images/market04-5.webp')"></div>
+          <div class="m33-sports-slot" style="background-image:url('images/market04-6.webp')"></div>
+          <div class="m33-sports-slot" style="background-image:url('images/market04-7.webp')"></div>
+        </div>
+      </div>
+    `;
+  }
+
   const hero = document.getElementById('hero');
   const heroBg = document.getElementById('heroBg');
   const heroText = document.getElementById('heroContent');
@@ -1051,9 +1146,6 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     update();
   }
 
-  /* ============================================================
-     ★ DOM 참조
-     ============================================================ */
   const modal = document.getElementById('modal');
   const modalTopbar = document.getElementById('modalTopbar');
   const modalPre = document.getElementById('modalPre');
@@ -1062,6 +1154,7 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
 
   const modalStandard = document.getElementById('modalStandard');
   const modalThirty = document.getElementById('modalThirty');
+  const modalThirtyThree = document.getElementById('modalThirtyThree');
   const modalImage = document.getElementById('modalImage');
   const modalImageWrap = document.querySelector('.modal-image-wrap');
   const videoSlot = document.getElementById('videoSlot');
@@ -1075,6 +1168,7 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
   const imgPrev = document.getElementById('imgPrev');
   const imgNext = document.getElementById('imgNext');
 
+  /* ★ .static 카드는 제외 → CALLIGRAPHY(40~43)는 모달 없음 */
   const clickableCards = Array.from(document.querySelectorAll('.work-card:not(.static)'));
   let currentIndex = 0, currentThumb = 0, thumbs = [], thumbSrcs = [];
   let currentVimeo = null;
@@ -1106,9 +1200,6 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     modalImage.classList.remove('is-video');
   }
 
-  /* ============================================================
-     ★ 일반 슬라이드 모드 (영상이 마지막 슬롯)
-     ============================================================ */
   function isVideoIndex(idx){
     return currentVimeo && idx === thumbSrcs.length - 1;
   }
@@ -1199,9 +1290,6 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     }
   });
 
-  /* ============================================================
-     ★ 모달 렌더 (영상은 항상 마지막 슬롯)
-     ============================================================ */
   function renderModal(card){
     clearSlideLayers();
     clearVideo();
@@ -1213,13 +1301,23 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     if (id === "32"){
       modalStandard.style.display = 'none';
       modalThirty.style.display = 'block';
+      modalThirtyThree.style.display = 'none';
       modalThirty.innerHTML = buildThirty();
       bindAudioPlayers();
       return;
     }
 
+    if (id === "33"){
+      modalStandard.style.display = 'none';
+      modalThirty.style.display = 'none';
+      modalThirtyThree.style.display = 'block';
+      modalThirtyThree.innerHTML = buildThirtyThree();
+      return;
+    }
+
     modalStandard.style.display = 'block';
     modalThirty.style.display = 'none';
+    modalThirtyThree.style.display = 'none';
 
     const data = PROJECT_DATA[id];
 
@@ -1259,13 +1357,12 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
 
     currentVimeo = (data && data.vimeo) ? data.vimeo : null;
 
-    /* ★ 이미지 먼저, 영상은 마지막에 push */
     thumbSrcs = [];
     imageList.forEach(function(src){
       thumbSrcs.push('images/' + src);
     });
     if (currentVimeo){
-      thumbSrcs.push('');   /* 마지막 = 영상 */
+      thumbSrcs.push('');
     }
 
     modalThumbs.innerHTML = '';
@@ -1292,9 +1389,6 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     updateImgNav();
   }
 
-  /* ============================================================
-     ★ 라디오 오디오 플레이어
-     ============================================================ */
   let currentAudio = null;
   let currentAudioBtn = null;
 
@@ -1374,9 +1468,6 @@ footer{background:#000;color:#777;padding:20px 34px;font-size:9px;letter-spacing
     });
   }
 
-  /* ============================================================
-     ★ 모달 열기 / 닫기 / 네비게이션
-     ============================================================ */
   function openModal(card){
     currentIndex = clickableCards.indexOf(card);
     renderModal(card);
